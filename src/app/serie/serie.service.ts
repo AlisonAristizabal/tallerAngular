@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Serie } from './serie';
-
 import { environment } from '../../environments/environment.development';
 
 @Injectable({
@@ -10,7 +9,7 @@ import { environment } from '../../environments/environment.development';
 })
 export class SerieService {
 
-  private apiUrl: environment.baseUrl + 'courses.json';
+  private apiUrl: `${environment.baseUrl}series.json`;
 
   constructor(private http: HttpClient) { }
 
