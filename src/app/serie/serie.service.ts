@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment.development';
 })
 export class SerieService {
 
-  private apiUrl: `${environment.baseUrl}series.json`;
+  private apiUrl: environment.baseUrl;
 
   constructor(private http: HttpClient) { }
 
