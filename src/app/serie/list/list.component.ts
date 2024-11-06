@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { SerieService } from '../serie.service';
 import { Serie } from '../Serie';
 
-
 @Component({
   selector: 'app-serie-list',
   templateUrl: './list.component.html',
@@ -11,7 +10,7 @@ import { Serie } from '../Serie';
 export class ListComponent implements OnInit {
 
   series: Serie[] = [];
-  promedioSeasons: number = 0;
+  promedioTemporadas: number = 0;
 
   constructor(private serieService: SerieService) { }
 
@@ -19,7 +18,7 @@ export class ListComponent implements OnInit {
 
     this.serieService.getSeries().subscribe((data: Serie[]) => {
       this.series = data;
-      this.promedioSeasons = this.calcularPromedioTemporadas();
+      this.promedioTemporadas = this.calcularPromedioTemporadas();
     });
   }
 
